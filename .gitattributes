@@ -1,0 +1,6 @@
+# 单文件应用，字节必须原样保存：不让 git 做换行转换
+# （Windows 上 checkout 默认会把 LF 变成 CRLF，21.6MB 的文件没必要为此变形）
+* -text
+
+# index.html 里 22MB 是字体的 base64，逐行 diff 没有意义
+index.html -diff
